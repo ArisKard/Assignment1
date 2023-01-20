@@ -16,3 +16,4 @@ An application to create different classes of Heroes and equip them with the app
 - Classes grouped and packaged according to functionality.
 - Unit testing for every functionality provided.
 - Project built with Maven and test with JUnit 5.
+- Could not provide a .yml file.
