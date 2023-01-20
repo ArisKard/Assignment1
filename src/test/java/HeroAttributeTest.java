@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class HeroAttributeTest {
 
     @Test
-    public void levelUp() {
+    public void levelUp() { //tests if hero's base attributes are properly leveled up when he levels up
 
         HeroAttribute heroAttribute = new HeroAttribute(1,2,3);
         heroAttribute.levelUp(5,10,15);

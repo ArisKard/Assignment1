@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class WeaponTest {
 
     @Test
-    public void testWeaponType(){
+    public void testWeaponType(){ //tests if the weapon type is properly assigned
 
         Weapon weapon = new Weapon(null, 0, WeaponType.SWORD, 0);
 
@@ -14,7 +14,7 @@ class WeaponTest {
     }
 
     @Test
-    public void testWeaponDamage(){
+    public void testWeaponDamage(){ //tests if the weapon's damage is properly assigned
 
         Weapon weapon = new Weapon(null, 0, WeaponType.SWORD, 10);
 

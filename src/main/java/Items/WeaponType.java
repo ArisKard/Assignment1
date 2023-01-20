@@ -1,6 +1,6 @@
 package Items;
 
-public enum WeaponType {
+public enum WeaponType { //enum for weapon types
 
     AXE,
     BOW,

@@ -6,14 +6,14 @@ import java.util.Arrays;
 
 public class Rogue extends Hero{
 
-    public Rogue(String name){
+    public Rogue(String name){              //constructor of rogues
         super(name);
         heroAttribute = new HeroAttribute(2, 6, 1);
         initializeValidItemLists();
     }
 
     @Override
-    protected void initializeValidItemLists() {
+    protected void initializeValidItemLists() {            //initialization of validWeaponTypes and validArmorTypes lists
 
         validWeaponTypes = new ArrayList<>(
                 Arrays.asList(WeaponType.DAGGER,
@@ -26,7 +26,7 @@ public class Rogue extends Hero{
     }
 
     @Override
-    public double heroDamage() {
+    public double heroDamage() {            //calculates rogue's damage, according to the formula
 
         int weaponDamage = (equipment.get(Slot.WEAPON)==null) ? 1 : ((Weapon)equipment.get(Slot.WEAPON)).getWeaponDamage();
 
@@ -35,7 +35,7 @@ public class Rogue extends Hero{
     }
 
     @Override
-    public void levelUp() {
+    public void levelUp() {         //rogue level up
 
         heroLevel++;
         heroAttribute.levelUp(1, 4, 1);

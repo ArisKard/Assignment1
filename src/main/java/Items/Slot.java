@@ -1,6 +1,6 @@
 package Items;
 
-public enum Slot {
+public enum Slot { //enum for item slots
 
     WEAPON,
     HEAD,

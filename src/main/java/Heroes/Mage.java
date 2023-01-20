@@ -7,14 +7,14 @@ import java.util.List;
 
 public class Mage extends Hero{
 
-    public Mage(String name){
+    public Mage(String name){                                         //constructor of mages
         super(name);
         heroAttribute = new HeroAttribute(1, 1, 8);
         initializeValidItemLists();
     }
 
     @Override
-    protected void initializeValidItemLists() {
+    protected void initializeValidItemLists() {            //initialization of validWeaponTypes and validArmorTypes lists
 
         validWeaponTypes = new ArrayList<>(
                 Arrays.asList(WeaponType.STAFF,
@@ -25,7 +25,7 @@ public class Mage extends Hero{
     }
 
     @Override
-    public double heroDamage() {
+    public double heroDamage() {                    //calculates mage's damage, according to the formula
 
         int weaponDamage = (equipment.get(Slot.WEAPON)==null) ? 1 : ((Weapon)equipment.get(Slot.WEAPON)).getWeaponDamage();
 
@@ -33,7 +33,7 @@ public class Mage extends Hero{
     }
 
     @Override
-    public void levelUp() {
+    public void levelUp() {                         //mage level up
 
         heroLevel++;
         heroAttribute.levelUp(1, 1, 5);

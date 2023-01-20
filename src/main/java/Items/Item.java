@@ -2,10 +2,10 @@ package Items;
 
 public abstract class Item {
 
-    private String name;
-    private int requiredLevel;
-    private Slot slot;
-    public Item(String name, int requiredLevel, Slot slot) {
+    private final String name;
+    private final int requiredLevel;
+    private final Slot slot;
+    public Item(String name, int requiredLevel, Slot slot) { //constructor of parent class
 
         this.name = name;
         this.requiredLevel = requiredLevel;

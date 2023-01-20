@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class ItemTest {
 
     @Test
-    public void testWeaponName(){
+    public void testWeaponName(){  //tests if the weapon's name is properly assigned
 
         String name = "Black Cleaver";
         Item item = new Weapon(name, 0, null, 0);
@@ -17,7 +17,7 @@ class ItemTest {
     }
 
     @Test
-    public void testArmorName(){
+    public void testArmorName(){ //tests if the armor's name is properly assigned
 
         String name = "Thornmail";
         Item item = new Armor(null, name, 0, null, null);
@@ -26,7 +26,7 @@ class ItemTest {
     }
 
     @Test
-    public void testWeaponRequiredLevel(){
+    public void testWeaponRequiredLevel(){ //tests if the weapon's required level is properly assigned
 
         Item item = new Weapon(null, 5, null, 0);
 
@@ -34,7 +34,7 @@ class ItemTest {
     }
 
     @Test
-    public void testArmorRequiredLevel(){
+    public void testArmorRequiredLevel(){  //tests if the armor's required level is properly assigned
 
         Item item = new Armor(null,null, 5, null, null);
 
@@ -42,7 +42,7 @@ class ItemTest {
     }
 
     @Test
-    public void testWeaponSlot(){
+    public void testWeaponSlot(){  //tests if the weapon's slot is properly assigned
 
         Item item = new Weapon(null, 0, null, 0);
 
@@ -50,7 +50,7 @@ class ItemTest {
     }
 
     @Test
-    public void testArmorSlot(){
+    public void testArmorSlot(){  //tests if the armor's slot is properly assigned
 
         Item item = new Armor(null,null, 0, Slot.HEAD, null);
 

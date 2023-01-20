@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class HeroTest {
 
     @Test
-    public void testWarriorName(){
+    public void testWarriorName(){  //tests if the warrior's name is properly assigned
 
         String name = "Shen";
         Hero hero = new Warrior(name);
@@ -20,7 +20,7 @@ class HeroTest {
     }
 
     @Test
-    public void testMageName(){
+    public void testMageName(){ //tests if the mage's name is properly assigned
 
         String name = "Veigar";
         Hero hero = new Mage(name);
@@ -29,7 +29,7 @@ class HeroTest {
     }
 
     @Test
-    public void testRangerName(){
+    public void testRangerName(){  //tests if the ranger's name is properly assigned
 
         String name = "Ashe";
         Hero hero = new Ranger(name);
@@ -38,7 +38,7 @@ class HeroTest {
     }
 
     @Test
-    public void testRogueName(){
+    public void testRogueName(){  //tests if the rogue's name is properly assigned
 
         String name = "Talon";
         Hero hero = new Rogue(name);
@@ -47,7 +47,7 @@ class HeroTest {
     }
 
     @Test
-    public void testWarriorHeroLevel(){
+    public void testWarriorHeroLevel(){  //tests if the warrior's level is properly initialized to 1
 
         Hero hero = new Warrior("Shen");
 
@@ -55,7 +55,7 @@ class HeroTest {
     }
 
     @Test
-    public void testMageHeroLevel(){
+    public void testMageHeroLevel(){  //tests if the mage's level is properly initialized to 1
 
         Hero hero = new Mage("Veigar");
 
@@ -63,7 +63,7 @@ class HeroTest {
     }
 
     @Test
-    public void testRangerHeroLevel(){
+    public void testRangerHeroLevel(){  //tests if the ranger's level is properly initialized to 1
 
         Hero hero = new Ranger("Ashe");
 
@@ -71,7 +71,7 @@ class HeroTest {
     }
 
     @Test
-    public void testRogueHeroLevel(){
+    public void testRogueHeroLevel(){  //tests if the rogue's level is properly initialized to 1
 
         Hero hero = new Rogue("Talon");
 
@@ -79,7 +79,7 @@ class HeroTest {
     }
 
     @Test
-    public void testWarriorHeroAttributes(){
+    public void testWarriorHeroAttributes(){  //tests if the warrior's attributes are properly initialized
 
         Hero hero = new Warrior("Shen");
 
@@ -89,7 +89,7 @@ class HeroTest {
     }
 
     @Test
-    public void testMageHeroAttributes(){
+    public void testMageHeroAttributes(){  //tests if the mage's attributes are properly initialized
 
         Hero hero = new Mage("Veigar");
 
@@ -99,7 +99,7 @@ class HeroTest {
     }
 
     @Test
-    public void testRangerHeroAttributes(){
+    public void testRangerHeroAttributes(){  //tests if the ranger's attributes are properly initialized
 
         Hero hero = new Ranger("Ashe");
 
@@ -109,7 +109,7 @@ class HeroTest {
     }
 
     @Test
-    public void testRogueHeroAttributes(){
+    public void testRogueHeroAttributes(){  //tests if the rogue's attributes are properly initialized
 
         Hero hero = new Rogue("Talon");
 
@@ -119,7 +119,7 @@ class HeroTest {
     }
 
     @Test
-    public void testWarriorLevelUp(){
+    public void testWarriorLevelUp(){ //tests if the warriors level up properly
 
         Hero hero = new Warrior("Shen");
         hero.levelUp();
@@ -130,7 +130,7 @@ class HeroTest {
     }
 
     @Test
-    public void testMageLevelUp(){
+    public void testMageLevelUp(){  //tests if the mages level up properly
 
         Hero hero = new Mage("Veigar");
         hero.levelUp();
@@ -141,7 +141,7 @@ class HeroTest {
     }
 
     @Test
-    public void testRangerLevelUp(){
+    public void testRangerLevelUp(){  //tests if the rangers level up properly
 
         Hero hero = new Ranger("Ashe");
         hero.levelUp();
@@ -152,7 +152,7 @@ class HeroTest {
     }
 
     @Test
-    public void testRogueLevelUp(){
+    public void testRogueLevelUp(){  //tests if the rogues level up properly
 
         Hero hero = new Rogue("Talon");
         hero.levelUp();
@@ -163,7 +163,7 @@ class HeroTest {
     }
 
     @Test
-    void testWeaponEquipUnderleveled() {
+    void testWeaponEquipUnderleveled() {  //tests if the InvalidWeaponException is thrown properly when hero is underleveled
 
         Hero hero = new Warrior("Shen");
         Weapon weapon = new Weapon(null, 2, null, 0);
@@ -172,7 +172,7 @@ class HeroTest {
     }
 
     @Test
-    void testWeaponEquipWrongType() {
+    void testWeaponEquipWrongType() {  //tests if the InvalidWeaponException is thrown properly when hero tries to equip an invalid type of weapon
 
         Hero hero = new Warrior("Shen");
         Weapon weapon = new Weapon(null, 1, WeaponType.STAFF, 0);
@@ -181,7 +181,7 @@ class HeroTest {
     }
 
     @Test
-    void testWeaponEquip() {
+    void testWeaponEquip() {  //tests if the weapon is equipped properly
 
         Hero hero = new Warrior("Shen");
         Weapon weapon = new Weapon("Black Cleaver", 1, WeaponType.AXE, 10);
@@ -197,7 +197,7 @@ class HeroTest {
     }
 
     @Test
-    void testArmorEquip() {
+    void testArmorEquip() {  //tests if the armor is equipped properly
 
         Hero hero = new Warrior("Shen");
         Armor armor = new Armor(ArmorType.MAIL,"Thornmail", 1, Slot.HEAD, new HeroAttribute(1,2,3));
@@ -215,7 +215,7 @@ class HeroTest {
     }
 
     @Test
-    void testArmorEquipUnderleveled() {
+    void testArmorEquipUnderleveled() {  //tests if the InvalidArmorException is thrown properly when hero is underleveled
 
         Hero hero = new Warrior("Shen");
         Armor armor = new Armor(null, null, 2, null, null);
@@ -224,7 +224,7 @@ class HeroTest {
     }
 
     @Test
-    void testArmorEquipWrongType() {
+    void testArmorEquipWrongType() { //tests if the InvalidArmorException is thrown properly when hero tries to equip an invalid type of armor
 
         Hero hero = new Warrior("Shen");
         Armor armor = new Armor(ArmorType.CLOTH, null, 1, null, null);
@@ -234,7 +234,7 @@ class HeroTest {
 
 
     @Test
-    void testIfWeaponEquipable() {
+    void testIfWeaponEquipable() { //tests if the weapon is equippable according to hero's weapon valid list
 
         Hero hero = new Warrior("Shen");
         Weapon weapon = new Weapon(null, 0, WeaponType.AXE, 0);
@@ -244,7 +244,7 @@ class HeroTest {
     }
 
     @Test
-    void testIfWeapoNotEquipable() {
+    void testIfWeaponNotEquipable() {  //tests if the weapon is not equippable according to hero's weapon valid list
 
         Hero hero = new Warrior("Shen");
         Weapon weapon = new Weapon(null, 0, WeaponType.DAGGER, 0);
@@ -254,7 +254,7 @@ class HeroTest {
     }
 
     @Test
-    void testIfArmorEquipable() {
+    void testIfArmorEquipable() { //tests if the armor is equippable according to hero's weapon valid list
 
         Hero hero = new Mage("Veigar");
         Armor armor = new Armor(ArmorType.CLOTH, null, 0, null, null);
@@ -264,7 +264,7 @@ class HeroTest {
     }
 
     @Test
-    void testIfArmorNotEquipable() {
+    void testIfArmorNotEquipable() {  //tests if the armor is not equippable according to hero's weapon valid list
 
         Hero hero = new Mage("Veigar");
         Armor armor = new Armor(ArmorType.PLATE, null, 0, null, null);
@@ -274,7 +274,7 @@ class HeroTest {
     }
 
     @Test
-    void testTotalAttributesCalculationNoEquipment() {
+    void testTotalAttributesCalculationNoEquipment() {  //tests if hero's attributes are calculated properly, when he has no equipment
 
         Hero hero = new Warrior("Shen");
 
@@ -284,7 +284,7 @@ class HeroTest {
     }
 
     @Test
-    void testTotalAttributesCalculationOnePieceOfArmor() {
+    void testTotalAttributesCalculationOnePieceOfArmor() {  //tests if hero's attributes are calculated properly, when he has one piece of armor equipped
 
         Hero hero = new Warrior("Shen");
         Armor armor = new Armor(ArmorType.PLATE, null, 1, Slot.BODY, new HeroAttribute(1,2,3));
@@ -301,7 +301,7 @@ class HeroTest {
     }
 
     @Test
-    void testTotalAttributesCalculationTwoPiecesOfArmor() {
+    void testTotalAttributesCalculationTwoPiecesOfArmor() {  //tests if hero's attributes are calculated properly, when he has two pieces of armor equipped
 
         Hero hero = new Warrior("Shen");
         Armor armor = new Armor(ArmorType.PLATE, null, 1, Slot.BODY, new HeroAttribute(1,2,3));
@@ -320,8 +320,8 @@ class HeroTest {
     }
 
     @Test
-    void testTotalAttributesCalculationReplaceArmor() {
-
+    void testTotalAttributesCalculationReplaceArmor() {  //tests if hero's attributes are calculated properly, when he has one piece of armor equipped and then
+                                                        //his armor is replaced by another item
         Hero hero = new Warrior("Shen");
         Armor armor = new Armor(ArmorType.PLATE, null, 1, Slot.BODY, new HeroAttribute(1,2,3));
         Armor armor2 = new Armor(ArmorType.MAIL, null, 1, Slot.BODY, new HeroAttribute(3,2,1));
@@ -342,7 +342,7 @@ class HeroTest {
     }
 
     @Test
-    void testCalculateDamageNoWeapon() {
+    void testCalculateDamageNoWeapon() {  //tests if hero's damage is calculated properly, when he has no weapon equipped
 
         Hero hero = new Warrior("Shen");
 
@@ -351,7 +351,7 @@ class HeroTest {
     }
 
     @Test
-    void testCalculateDamageWithWeapon() {
+    void testCalculateDamageWithWeapon() {  //tests if hero's damage is calculated properly, when he has a weapon equipped
 
         Hero hero = new Warrior("Shen");
         Weapon weapon = new Weapon(null, 1, WeaponType.AXE, 10);
@@ -364,7 +364,7 @@ class HeroTest {
     }
 
     @Test
-    void testCalculateDamageReplaceWeapon() {
+    void testCalculateDamageReplaceWeapon() { //tests if hero's damage is calculated properly, when he has a weapon equipped and then it's replaced by another weapon
 
         Hero hero = new Warrior("Shen");
         Weapon weapon = new Weapon(null, 1, WeaponType.AXE, 5);
@@ -382,7 +382,7 @@ class HeroTest {
     }
 
     @Test
-    void testCalculateDamageWeaponAndArmor() {
+    void testCalculateDamageWeaponAndArmor() { //tests if hero's damage is calculated properly, when he has both weapon and a piece of armor equipped
 
         Hero hero = new Warrior("Shen");
         Weapon weapon = new Weapon(null, 1, WeaponType.AXE, 10);
@@ -400,7 +400,7 @@ class HeroTest {
     }
 
     @Test
-    void testHeroDisplay() {
+    void testHeroDisplay() {  //test if the hero's state is displayed properly
 
         Hero hero = new Warrior("Shen");
 

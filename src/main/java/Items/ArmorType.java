@@ -1,6 +1,6 @@
 package Items;
 
-public enum ArmorType {
+public enum ArmorType { //enum for armor types
 
     CLOTH,
     LEATHER,

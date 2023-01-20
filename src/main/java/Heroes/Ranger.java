@@ -7,14 +7,14 @@ import java.util.List;
 
 public class Ranger extends Hero{
 
-    public Ranger(String name) {
+    public Ranger(String name) {                //constructor of rangers
         super(name);
         heroAttribute = new HeroAttribute(1, 7, 1);
         initializeValidItemLists();
     }
 
     @Override
-    protected void initializeValidItemLists() {
+    protected void initializeValidItemLists() {         //initialization of validWeaponTypes and validArmorTypes lists
 
         validWeaponTypes = new ArrayList<>(
                 List.of(WeaponType.BOW));
@@ -25,7 +25,7 @@ public class Ranger extends Hero{
     }
 
     @Override
-    public double heroDamage() {
+    public double heroDamage() {                //calculates ranger's damage, according to the formula
 
         int weaponDamage = (equipment.get(Slot.WEAPON)==null) ? 1 : ((Weapon)equipment.get(Slot.WEAPON)).getWeaponDamage();
 
@@ -34,7 +34,7 @@ public class Ranger extends Hero{
 
 
     @Override
-    public void levelUp() {
+    public void levelUp() {                     //ranger level up
 
         heroLevel++;
         heroAttribute.levelUp(1, 5, 1);

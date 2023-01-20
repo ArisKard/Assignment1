@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class ArmorTest {
 
     @Test
-    public void testArmorType(){
+    public void testArmorType(){  //tests if the armor type is properly assigned
 
         Armor armor = new Armor(ArmorType.LEATHER,null, 0, null, null);
 
@@ -15,14 +15,14 @@ class ArmorTest {
     }
 
     @Test
-    public void testArmorAttributes(){
+    public void testArmorAttributes(){  //tests if the armor's attributes are properly assigned
 
         HeroAttribute armorAttribute = new HeroAttribute(1,2,3);
         Armor armor = new Armor(null,null, 0, null, armorAttribute);
 
-        Assertions.assertEquals(1, armorAttribute.getStrength());
-        Assertions.assertEquals(2, armorAttribute.getDexterity());
-        Assertions.assertEquals(3, armorAttribute.getIntelligence());
+        Assertions.assertEquals(1, armor.getArmorAttribute().getStrength());
+        Assertions.assertEquals(2, armor.getArmorAttribute().getDexterity());
+        Assertions.assertEquals(3, armor.getArmorAttribute().getIntelligence());
     }
 
 }
